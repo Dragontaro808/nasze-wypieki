@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+header{
+    display:inline-block;
+    background-color:#ab4040;
+    text-align:center;
+    height:200px;
+    width:100%;
+    line-height:170px;
+    font-size:100px;
+
+}
+
+main{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    width:100%;
+    background-color:cadetblue;
+    grid-gap:50px;
+    padding:50px;
+    min-height:1000px;
+    
+}
+
+.item{
+    border:5px solid black;
+    position:relative;
+    justify-content:center;  
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: white;
+    padding:10px;
+    
+}
+
+h2{
+    font-size:50px;
+    width:100%;
+    text-align:center;
+    
+}
+
+p{
+    font-size:30px;
+    text-align:center;
+}
+
+main a{
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+    background-color:rgb(93, 199, 235);
+    border:5px solid darkblue;
+    font-weight:bold;
+    text-align:center;
+    padding:20px; 
+    width:50%;
+    margin-top:40px;
+    
+}
+
+main a:hover{
+    background-color:black;
+    border-color:black;
+    color:white;
+}
+
+.okruszki{
+    position:absolute;
+    top:5px;
+    left:5px;
+    list-style-type:none;
+}
+
+.okruszki li{
+    display:inline;
+    font-size:15px;
+}
+
+.okruszki li+li:before{
+    padding:10px;
+    color:black;
+    content:"/\00a0";
+}
+
+.okruszki li a{
+    color:black;
+    text-decoration:none;
+}
+
+.okruszki li a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+
+
+@media (max-width:1035px){
+    .item{width:100%;}
+    main{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr;
+    }
+}
